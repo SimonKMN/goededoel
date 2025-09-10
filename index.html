@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hersen Stichting</title>
+    <link rel="icon" type="image/x-icon" href="images/logoklein.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <img src="images/logogroot.png" alt="Hersen Stichting Logo" class="logo">
+    </div>
+    <!-- Hero section -->
+    <div class="hero-container">
+        <div class="hero-foto">
+            <img src="images/hero.jpg" alt="Hero foto">
+        </div>
+        <div class="hero-text">
+            <h1>Recordbedrag bij Swim4Brains</h1>
+            <p>Afgelopen zaterdag zwommen meer dan vijftig sportieve deelnemers 22 kilometer over het IJsselmeer, van Stavoren naar Medemblik. Samen haalden de zwemmers het indrukwekkende bedrag van inmiddels 144.480 euro op.</p>
+        </div>
+    </div>
+    <!--Call to action -->
+    <div class="cta-section">
+        <div class="cta-container">
+            <img src="images/brein.png" alt="Call to action foto">
+            <h1>17.100.000</h1>
+            <h2>euro</h2>
+            <p>investeerden we in 2024 in projecten, onderzoeken en innovaties.</p>
+        </div>
+        <div class="cta-container">
+            <img src="images/mensen.png" alt="Call to action foto">
+            <h1>150.000.000</h1>
+            <h2>ommetjes</h2>
+            <p>gelopen sinds de lancering van Ommetje; dé nr. 1 wandel-app.</p>
+        </div>
+        <div class="cta-container">
+            <img src="images/hand.png" alt="Call to action foto">
+            <h1>146.000</h1>
+            <h2>donateurs</h2>
+            <p>die ons werk en onze missie steunen. We zijn hen ontzettend dankbaar!</p>
+        </div>
+    </div>
+    <!-- Donation section -->
+    <div id="totaalbedrag-container" style="text-align:center; margin: 0px 0;">
+        <h2>Totaal opgehaald bedrag:</h2>
+        <p id="totaalbedrag" style="font-size:2em; color:#6C2C7F;">€ 0</p>
+    </div>
+    <div class="doneer-section">   
+        <div class="doneer-container">
+            <h1>Standaard Pakket</h1>
+            <h2>€ 5,-</h2>
+            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(5)">
+        </div>
+        <div class="doneer-container">
+            <h1>Middel Pakket</h1>
+            <h2>€ 10,-</h2>
+            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(10)">
+        </div>
+        <div class="doneer-container">
+            <h1>Groot Pakket</h1>
+            <h2>€ 20,-</h2>
+            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(20)">
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="contact-section">
+        <div class="contact-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.9742964200523!2d4.313869712299055!3d52.08019777183216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c5c15b9%3A0xb786a6391dc5ff4!2sPlein%2020%2C%202511%20CS%20Den%20Haag!5e0!3m2!1snl!2snl!4v1757529555410!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="contact-container">
+            <h2>Bezoek adress</h2>
+            <p>Maanplein 20 <br>2516 CK Den Haag</p>
+            <h2>Postadres</h2>
+            <p>Postbus 191<br>2501 CD Den Haag<br>Tel: 070 – 360 48 16 (op werkdagen van 09.00 tot 17.00 uur bereikbaar)
+                <br>Rekeningnummer (IBAN): NL18 INGB 0000 000 860</p>
+            <h2>Zakelijke Informatie</h2>
+            <p>KvK: 41155766a<br>
+De Hersenstichting is een ANBI<br>RSIN: 0067.39.398
+<br>070 – 360 48 16.<br>
+<a href="mailto:info@hersenstichting.nl">info@hersenstichting.nl</p>
+        </div>
+    </div>
+<script>
+let totaal = Number(localStorage.getItem('totaalbedrag')) || 0;
+document.getElementById('totaalbedrag').textContent = '€ ' + totaal;
+
+function voegBedragToe(bedrag) {
+    totaal += bedrag;
+    document.getElementById('totaalbedrag').textContent = '€ ' + totaal;
+    localStorage.setItem('totaalbedrag', totaal);
+    alert('Bedankt voor je donatie van € ' + bedrag + '!');
+}
+</script>
+</body>
+</html>
