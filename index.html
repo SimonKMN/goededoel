@@ -43,34 +43,39 @@
             <p>die ons werk en onze missie steunen. We zijn hen ontzettend dankbaar!</p>
         </div>
     </div>
-    <!-- Donation section -->
-    <div id="totaalbedrag-container" style="text-align:center; margin: 0px 0;">
-        <h2>Totaal opgehaald bedrag:</h2>
-        <p id="totaalbedrag" style="font-size:2em; color:#6C2C7F;">€ 0</p>
+    <div class="call-container">
+        <div class="call-foto">
+            <img src="images/call.png" alt="Hero foto">
+        </div>
+        <div class="call-text">
+            <h1>Onderzoek Hoofdpijn en Verbeter Jouw Leven</h1>
+            <p>Hoofdpijn kan soms zo intens zijn dat zelfs paracetamol geen verlichting biedt. In sommige gevallen blijft de pijn zelfs dagenlang aanhouden, wat je dagelijks functioneren ernstig kan belemmeren. Drie soorten hoofdpijn – migraine, clusterhoofdpijn en spanningshoofdpijn – kunnen aanzienlijke invloed hebben op je leven. De Hersenstichting zet zich in voor onderzoeken en projecten die hoofdpijn beter behandelbaar maken en de kwaliteit van leven voor mensen met hoofdpijn verbeteren. Steun dit belangrijke werk en help mee de impact van hoofdpijn te verminderen.</p>
+        </div>
+        
+
     </div>
-    <div class="doneer-section">   
-        <div class="doneer-container">
-            <h1>Standaard Pakket</h1>
-            <h2>€ 5,-</h2>
-            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(5)">
-        </div>
-        <div class="doneer-container">
-            <h1>Middel Pakket</h1>
-            <h2>€ 10,-</h2>
-            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(10)">
-        </div>
-        <div class="doneer-container">
-            <h1>Groot Pakket</h1>
-            <h2>€ 20,-</h2>
-            <img src="images/doneer.png" alt="Doneer foto" onclick="voegBedragToe(20)">
-        </div>
+    <!-- Donation section -->
+    <div class="donation-section">
+        <div class="donation-container">
+            <h1>Ja, ik help mee en doneer!</h1>
+            <p>Een hersenaandoening zet je leven op z’n kop. Daarom zet de Hersenstichting alles op alles voor gezonde hersenen voor iedereen. Fijn dat jij daarbij wilt helpen</p>
+            <button id="donate-button">Eenmalig</button>
+            <button id="donate-button">Maandelijks</button>
+            <button id="donate-button">Jaarlijks</button><br>
+            <button id="donate-button">€5</button>
+            <button id="donate-button">€10</button>
+            <button id="donate-button">€25</button>
+            <button id="donate-button">Anders</button><br>
+            <button id="donate1-button">Doneer</button>
+        </div>   
+
     </div>
     <!-- Contact -->
     <div class="contact-section">
-        <div class="contact-container">
+        <div class="contact-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.9742964200523!2d4.313869712299055!3d52.08019777183216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5b7232c5c15b9%3A0xb786a6391dc5ff4!2sPlein%2020%2C%202511%20CS%20Den%20Haag!5e0!3m2!1snl!2snl!4v1757529555410!5m2!1snl!2snl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <div class="contact-container">
+        <div class="contact-text">
             <h2>Bezoek adress</h2>
             <p>Maanplein 20 <br>2516 CK Den Haag</p>
             <h2>Postadres</h2>
@@ -83,16 +88,5 @@ De Hersenstichting is een ANBI<br>RSIN: 0067.39.398
 <a href="mailto:info@hersenstichting.nl">info@hersenstichting.nl</p>
         </div>
     </div>
-<script>
-let totaal = Number(localStorage.getItem('totaalbedrag')) || 0;
-document.getElementById('totaalbedrag').textContent = '€ ' + totaal;
-
-function voegBedragToe(bedrag) {
-    totaal += bedrag;
-    document.getElementById('totaalbedrag').textContent = '€ ' + totaal;
-    localStorage.setItem('totaalbedrag', totaal);
-    alert('Bedankt voor je donatie van € ' + bedrag + '!');
-}
-</script>
 </body>
 </html>
